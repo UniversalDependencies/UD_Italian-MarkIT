@@ -1,41 +1,41 @@
+# MarkIT: Italian Treebank of Marked Structures
+
+This page refers to the dataset presented in the paper:
+
+It is MarkIT That is New: An Italian Treebank of Marked Constructions. Teresa Paccosi, Alessio Palmero Aprosio and Sara Tonelli, To appear in Proceedings of the Eighth Italian Conference on Computational Linguistics 2022 (CLIC-it 2021)
+
 # Summary
 
-... 1-2 sentences (see [release checklist](http://universaldependencies.org/release_checklist.html#the-readme-file) for README guidelines) ...
-
+The MarkIT resource contains around 800 sentences extracted from students' essays manually annotated with syntactic depencendies. The treebank covers seven types of marked constructions, plus some ambiguous sentences whose syntax can be wrongly classified as marked.
 
 # Introduction
 
-...
-
+MarkIT is a treebank of marked constructions in Italian, containing around 800 sentences with dependency annotation.
+First we automatically annotate the sentences using Tint, then a manual fix of the errors is performed on the whole dataset.
+The resource covers seven types of marked constructions plus some ambiguous sentences, whose syntax can be wrongly classified as marked.
 
 # Acknowledgments
 
-...
-
-## References
-
-* (citation)
-
+The selection, extraction, and annotation of the dataset have been performed by Teresa Paccosi, Alessio Palmero Aprosio, and Sara Tonelli.
 
 # Changelog
 
 * 2022-05-15 v2.10
   * Initial release in Universal Dependencies.
 
-
 <pre>
 === Machine-readable metadata (DO NOT REMOVE!) ================================
 Data available since: UD v2.10
-License: CC BY-SA 4.0
+License: CC BY 4.0
 Includes text: yes
-Genre: grammar-examples
-Lemmas: manual native
-UPOS: manual native
-XPOS: not available
-Features: manual native
+Genre: learner-essays
+Lemmas: automatic with corrections
+UPOS: automatic with corrections
+XPOS: automatic with corrections
+Features: automatic with corrections
 Relations: manual native
-Contributors: Palmero Aprosio, Alessio
-Contributing: here
+Contributors: Paccosi, Teresa; Palmero Aprosio, Alessio; Tonelli, Sara
+Contributing: elsewhere
 Contact: aprosio@fbk.eu
 ===============================================================================
 </pre>

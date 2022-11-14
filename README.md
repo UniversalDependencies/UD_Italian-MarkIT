@@ -10,7 +10,7 @@ The MarkIT resource contains around 800 sentences extracted from students' essay
 
 # Introduction
 
-MarkIT is a treebank of marked constructions in Italian, containing around 800 sentences with dependency annotation.
+MarkIT is a treebank of marked constructions in Italian, containing around 1,300 sentences with dependency annotation.
 First we automatically annotate the sentences using Tint, then a manual fix of the errors is performed on the whole dataset.
 The resource covers seven types of marked constructions plus some ambiguous sentences, whose syntax can be wrongly classified as marked.
 
@@ -20,6 +20,11 @@ The selection, extraction, and annotation of the dataset have been performed by 
 
 # Changelog
 
+* 2022-11-15 v2.11
+  * Removed duplicated sentences
+  * Fixed `nsubj:outer` relation
+  * Fixed genre and sentences amount in README
+  * Minor fixes
 * 2022-05-15 v2.10
   * Initial release in Universal Dependencies.
 
@@ -28,7 +33,7 @@ The selection, extraction, and annotation of the dataset have been performed by 
 Data available since: UD v2.10
 License: CC BY 4.0
 Includes text: yes
-Genre: learner-essays
+Genre: grammar-examples
 Lemmas: automatic with corrections
 UPOS: automatic with corrections
 XPOS: automatic with corrections

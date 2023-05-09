@@ -1,11 +1,11 @@
 Running the following version of UD tools:
-commit 13e6b709a8bc643c3f902800321a7beda46feb8d
+commit 04abe686385f14a9a6f68784bd723a6b60ded594
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Sun Nov 13 22:03:41 2022 +0100
+Date:   Tue May 9 00:14:39 2023 +0200
 Evaluating the following revision of UD_Italian-MarkIT:
-commit 86225765ce138b0f0fda126e891d0f202640681a
-Merge: 66dabd5 fa54dc6
+commit 28549e2f5fb9b8a2200b317c1df18cb9a2e9c527
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
+Date:   Mon Nov 14 11:24:28 2022 +0100
 Size: counted 40488 of 40488 words (nodes).
 Size: min(0, log((N/1000)**2)) = 7.40201126782355.
 Size: maximum value 13.815511 is for 1000000 words or more.
@@ -24,11 +24,11 @@ Udapi:
 Udapi: found 1914 bugs.
 Udapi: worst expected case (threshold) is one bug per 10 words. There are 40488 words.
 Genres: found 1 out of 17 known.
-validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-dev.conllu
+/net/work/people/zeman/unidep/tools/validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-dev.conllu
 *** PASSED ***
-validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-test.conllu
+/net/work/people/zeman/unidep/tools/validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-test.conllu
 *** PASSED ***
-validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-train.conllu
+/net/work/people/zeman/unidep/tools/validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-train.conllu
 *** PASSED ***
 Validity: 1
 (weight=0.0769230769230769) * (score{features}=0.5) = 0.0384615384615385

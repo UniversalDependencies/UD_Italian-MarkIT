@@ -1,11 +1,11 @@
 Running the following version of UD tools:
-commit 04abe686385f14a9a6f68784bd723a6b60ded594
+commit e9726a6a7d6913193d90edb45a4cb549235c5b16
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Tue May 9 00:14:39 2023 +0200
+Date:   Sat Nov 4 17:10:55 2023 +0100
 Evaluating the following revision of UD_Italian-MarkIT:
-commit 28549e2f5fb9b8a2200b317c1df18cb9a2e9c527
+commit 6aa80557a1bf6135dfed4d5b44f2c6faa8df918d
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Mon Nov 14 11:24:28 2022 +0100
+Date:   Tue May 9 10:50:10 2023 +0200
 Size: counted 40488 of 40488 words (nodes).
 Size: min(0, log((N/1000)**2)) = 7.40201126782355.
 Size: maximum value 13.815511 is for 1000000 words or more.
@@ -20,13 +20,15 @@ Features: source of annotation (from README) factor is 0.5.
 Universal relations: 31 out of 37 found in the corpus.
 Universal relations: source of annotation (from README) factor is 1.
 Udapi:
-               TOTAL       1914
-Udapi: found 1914 bugs.
+               TOTAL       1911
+Udapi: found 1911 bugs.
 Udapi: worst expected case (threshold) is one bug per 10 words. There are 40488 words.
 Genres: found 1 out of 17 known.
 /net/work/people/zeman/unidep/tools/validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-dev.conllu
 *** PASSED ***
 /net/work/people/zeman/unidep/tools/validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-test.conllu
+[Line 12179 Sent 471 Node 1]: [L3 Warning fixed-gap] Gaps in fixed expression [1, 5] 'Ecco * * * che'
+Warnings: 1
 *** PASSED ***
 /net/work/people/zeman/unidep/tools/validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-train.conllu
 *** PASSED ***
@@ -37,8 +39,8 @@ Validity: 1
 (weight=0.256410256410256) * (score{size}=0.535775441433577) = 0.137378318316302
 (weight=0.0512820512820513) * (score{split}=1) = 0.0512820512820513
 (weight=0.0769230769230769) * (score{tags}=0.0882352941176471) = 0.00678733031674208
-(weight=0.307692307692308) * (score{udapi}=0.527267338470658) = 0.162236104144818
+(weight=0.307692307692308) * (score{udapi}=0.528008298755187) = 0.162464091924673
 (weight=0.0769230769230769) * (score{udeprels}=0.837837837837838) = 0.0644490644490645
-(TOTAL score=0.503580832309882) * (availability=1) * (validity=1) = 0.503580832309882
+(TOTAL score=0.503808820089737) * (availability=1) * (validity=1) = 0.503808820089737
 STARS = 2.5
-UD_Italian-MarkIT	0.503580832309882	2.5
+UD_Italian-MarkIT	0.503808820089737	2.5

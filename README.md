@@ -33,6 +33,7 @@ The selection, extraction, and annotation of the dataset have been performed by 
 Data available since: UD v2.10
 License: CC BY 4.0
 Includes text: yes
+Parallel: no
 Genre: grammar-examples
 Lemmas: automatic with corrections
 UPOS: automatic with corrections

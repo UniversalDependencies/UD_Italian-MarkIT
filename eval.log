@@ -1,11 +1,11 @@
 Running the following version of UD tools:
-commit 26e6c87a2f518322d15901a351199b6be6569062
+commit b39dc4111bb13658bc0c204b48bb78b492e45d2b
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Fri Nov 7 15:39:58 2025 +0100
+Date:   Tue May 5 17:01:41 2026 +0200
 Evaluating the following revision of UD_Italian-MarkIT:
-commit 85932c32c0069bd0ef088b7f06e684c88f7e8540
-Merge: fd0aceb 957127d
+commit b01ee41ef48d6bca6bb392a79367a0f5b6ca3780
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
+Date:   Tue Nov 11 19:49:31 2025 +0100
 CoNLL-U data file regular expression = '(.+)-ud-(train|dev|test)\.conllu'
 Language-treebank code (from CoNLL-U file name) = 'it_markit'
 Language code (from CoNLL-U file name) = 'it'
@@ -25,61 +25,104 @@ Universal relations: 31 out of 37 found in the corpus.
 Universal relations: source of annotation (from README) factor is 1.
 Genres: found 1 out of 18 known.
 /net/work/people/zeman/unidep/tools/validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-dev.conllu
-[Line 15 Sent 322]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 16 Sent 322]: [L3 Warning pron-det-without-prontype] The word 'l'' is tagged 'DET' but it lacks the 'PronType' feature
-[Line 100 Sent 331]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 115 Sent 341]: [L3 Warning pron-det-without-prontype] The word 'l'' is tagged 'DET' but it lacks the 'PronType' feature
-[Line 132 Sent 341]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 140 Sent 341]: [L3 Warning fixed-without-extpos] Fixed expression 'attorno a' does not have the 'ExtPos' feature
-[Line 166 Sent 343]: [L3 Warning pron-det-without-prontype] The word 'c'' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 172 Sent 343]: [L3 Warning pron-det-without-prontype] The word 'l'' is tagged 'DET' but it lacks the 'PronType' feature
-[Line 214 Sent 343]: [L3 Warning pron-det-without-prontype] The word 'l'' is tagged 'DET' but it lacks the 'PronType' feature
-[Line 242 Sent 346]: [L3 Warning pron-det-without-prontype] The word 'l'' is tagged 'DET' but it lacks the 'PronType' feature
-...suppressing further errors regarding Warning
-[Line 7779 Sent 559]: [L3 Syntax rel-upos-mark] 'mark' should not be 'NOUN' ('prima')
-Syntax errors: 1
-Warnings: 534
-*** FAILED *** with 1 errors
-Exit code: 1
-/net/work/people/zeman/unidep/tools/validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-test.conllu
-[Line 83 Sent 3]: [L3 Warning fixed-without-extpos] Fixed expression 'attorno a' does not have the 'ExtPos' feature
-[Line 136 Sent 4]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 155 Sent 5]: [L3 Warning pron-det-without-prontype] The word 'tali' is tagged 'DET' but it lacks the 'PronType' feature
-[Line 182 Sent 15]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 217 Sent 16]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 228 Sent 18]: [L3 Warning pron-det-without-prontype] The word 'L'' is tagged 'DET' but it lacks the 'PronType' feature
-[Line 243 Sent 18]: [L3 Warning pron-det-without-prontype] The word 'l'' is tagged 'DET' but it lacks the 'PronType' feature
-[Line 291 Sent 24]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 348 Sent 25]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 355 Sent 25]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-...suppressing further errors regarding Warning
-[Line 3531 Sent 233]: [L3 Syntax too-many-objects] Multiple direct objects [11, 17] ('che', 'coraggio') under the predicate 'avuto'.
-[Line 8155 Sent 256]: [L3 Syntax too-many-objects] Multiple direct objects [4, 10] ('lo', 'nostro') under the predicate 'mantener'.
-[Line 11295 Sent 340]: [L3 Syntax too-many-objects] Multiple direct objects [6, 11] ('lo', 'parte') under the predicate 'considerare'.
-Syntax errors: 3
-Warnings: 467
+[Line 15 Sent 322]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 16 Sent 322]: [L3 WARNING pron-det-without-prontype] The word 'l'' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 100 Sent 331]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 115 Sent 341]: [L3 WARNING pron-det-without-prontype] The word 'l'' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 132 Sent 341]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 140 Sent 341]: [L3 WARNING fixed-without-extpos] Fixed expression 'attorno a' does not have the 'ExtPos' feature
+[Line 166 Sent 343]: [L3 WARNING pron-det-without-prontype] The word 'c'' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 172 Sent 343]: [L3 WARNING pron-det-without-prontype] The word 'l'' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 214 Sent 343]: [L3 WARNING pron-det-without-prontype] The word 'l'' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 242 Sent 346]: [L3 WARNING pron-det-without-prontype] The word 'l'' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 245 Sent 346]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+...suppressing further messages regarding WARNING/MORPHO
+[Line 834 Sent 395]: [L3 WARNING fixed-without-extpos] Fixed expression 'davanti a' does not have the 'ExtPos' feature
+[Line 1053 Sent 412]: [L3 WARNING fixed-without-extpos] Fixed expression 'su di' does not have the 'ExtPos' feature
+[Line 1108 Sent 417]: [L3 WARNING fixed-without-extpos] Fixed expression 'Anche se' does not have the 'ExtPos' feature
+[Line 1177 Sent 427]: [L3 WARNING fixed-without-extpos] Fixed expression 'in quanto' does not have the 'ExtPos' feature
+[Line 1348 Sent 441]: [L3 WARNING fixed-without-extpos] Fixed expression 'Oltre a' does not have the 'ExtPos' feature
+[Line 1400 Sent 446]: [L3 WARNING fixed-without-extpos] Fixed expression 'Riguardo a' does not have the 'ExtPos' feature
+[Line 2220 Sent 524]: [L3 WARNING fixed-without-extpos] Fixed expression 'Su di' does not have the 'ExtPos' feature
+[Line 2385 Sent 531]: [L3 WARNING fixed-without-extpos] Fixed expression 'oltre ad' does not have the 'ExtPos' feature
+[Line 2406 Sent 531]: [L3 WARNING fixed-without-extpos] Fixed expression 'anche se' does not have the 'ExtPos' feature
+...suppressing further messages regarding WARNING/SYNTAX
+[Line 5697 Sent 411]: [L3 SYNTAX obl-should-be-nmod] The parent (node [16] 'senso') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 7779 Sent 559]: [L3 SYNTAX rel-upos-mark] 'mark' should not be 'NOUN' ('prima')
+[Line 9130 Sent 641]: [L3 SYNTAX obl-should-be-nmod] The parent (node [5] 'attenzione') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+Warnings: 530
+SYNTAX errors: 3
 *** FAILED *** with 3 errors
 Exit code: 1
+/net/work/people/zeman/unidep/tools/validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-test.conllu
+[Line 83 Sent 3]: [L3 WARNING fixed-without-extpos] Fixed expression 'attorno a' does not have the 'ExtPos' feature
+[Line 136 Sent 4]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 155 Sent 5]: [L3 WARNING pron-det-without-prontype] The word 'tali' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 182 Sent 15]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 217 Sent 16]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 228 Sent 18]: [L3 WARNING pron-det-without-prontype] The word 'L'' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 243 Sent 18]: [L3 WARNING pron-det-without-prontype] The word 'l'' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 291 Sent 24]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 348 Sent 25]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 355 Sent 25]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 370 Sent 26]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+...suppressing further messages regarding WARNING/MORPHO
+[Line 527 Sent 39]: [L3 WARNING fixed-without-extpos] Fixed expression 'grazie a' does not have the 'ExtPos' feature
+[Line 622 Sent 41]: [L3 WARNING fixed-without-extpos] Fixed expression 'grazie a' does not have the 'ExtPos' feature
+[Line 696 Sent 44]: [L3 WARNING fixed-without-extpos] Fixed expression 'grazie a' does not have the 'ExtPos' feature
+[Line 707 Sent 44]: [L3 WARNING fixed-without-extpos] Fixed expression 'fino ad' does not have the 'ExtPos' feature
+[Line 922 Sent 52]: [L3 WARNING fixed-without-extpos] Fixed expression 'tenendo conto' does not have the 'ExtPos' feature
+[Line 1783 Sent 124]: [L3 WARNING fixed-without-extpos] Fixed expression 'dietro a' does not have the 'ExtPos' feature
+[Line 1873 Sent 134]: [L3 WARNING fixed-without-extpos] Fixed expression 'rispetto a' does not have the 'ExtPos' feature
+[Line 1965 Sent 137]: [L3 WARNING fixed-without-extpos] Fixed expression 'più che' does not have the 'ExtPos' feature
+[Line 2180 Sent 143]: [L3 SYNTAX obl-should-be-nmod] The parent (node [11] 'musicisti') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 2438 Sent 155]: [L3 WARNING fixed-without-extpos] Fixed expression 'dinanzi a' does not have the 'ExtPos' feature
+...suppressing further messages regarding WARNING/SYNTAX
+[Line 3531 Sent 233]: [L3 SYNTAX too-many-objects] Multiple direct objects [11, 17] ('che', 'coraggio') under the predicate 'avuto'.
+[Line 5177 Sent 36]: [L3 SYNTAX obl-should-be-nmod] The parent (node [8] 'scoppio') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 8155 Sent 256]: [L3 SYNTAX too-many-objects] Multiple direct objects [4, 10] ('lo', 'nostro') under the predicate 'mantener'.
+[Line 9141 Sent 22]: [L3 SYNTAX obl-should-be-nmod] The parent (node [16] 'classi') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 11295 Sent 340]: [L3 SYNTAX too-many-objects] Multiple direct objects [6, 11] ('lo', 'parte') under the predicate 'considerare'.
+Warnings: 464
+SYNTAX errors: 6
+*** FAILED *** with 6 errors
+Exit code: 1
 /net/work/people/zeman/unidep/tools/validate.py --lang it --max-err=10 UD_Italian-MarkIT/it_markit-ud-train.conllu
-[Line 27 Sent 232]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 53 Sent 706]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 112 Sent 713]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 141 Sent 714]: [L3 Warning fixed-without-extpos] Fixed expression 'intorno a' does not have the 'ExtPos' feature
-[Line 184 Sent 714]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 214 Sent 714]: [L3 Warning pron-det-without-prontype] The word 'quale' is tagged 'DET' but it lacks the 'PronType' feature
-[Line 286 Sent 718]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 346 Sent 725]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 404 Sent 729]: [L3 Warning fixed-without-extpos] Fixed expression 'oltre a' does not have the 'ExtPos' feature
-[Line 416 Sent 729]: [L3 Warning pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
-...suppressing further errors regarding Warning
-[Line 1254 Sent 782]: [L3 Syntax too-many-objects] Multiple direct objects [68, 74] ('tutto', 'pregi') under the predicate 'piace'.
-[Line 10064 Sent 745]: [L3 Syntax rel-upos-case] 'case' should not be 'ADJ' ('vicini')
-[Line 10569 Sent 775]: [L3 Syntax too-many-objects] Multiple direct objects [15, 20] ('ci', 'tempo') under the predicate 'lascia'.
-[Line 19647 Sent 862]: [L3 Syntax too-many-objects] Multiple direct objects [2, 5] ('lo', 'principio') under the predicate 'ritengo'.
-[Line 21986 Sent 1230]: [L3 Syntax too-many-objects] Multiple direct objects [5, 11] ('lo', 'guerra') under the predicate 'abbiamo'.
-Syntax errors: 5
-Warnings: 964
-*** FAILED *** with 5 errors
+[Line 27 Sent 232]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 53 Sent 706]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 112 Sent 713]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 141 Sent 714]: [L3 WARNING fixed-without-extpos] Fixed expression 'intorno a' does not have the 'ExtPos' feature
+[Line 184 Sent 714]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 214 Sent 714]: [L3 WARNING pron-det-without-prontype] The word 'quale' is tagged 'DET' but it lacks the 'PronType' feature
+[Line 286 Sent 718]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 346 Sent 725]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 404 Sent 729]: [L3 WARNING fixed-without-extpos] Fixed expression 'oltre a' does not have the 'ExtPos' feature
+[Line 416 Sent 729]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 454 Sent 734]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 492 Sent 739]: [L3 WARNING pron-det-without-prontype] The word 'che' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 500 Sent 739]: [L3 WARNING fixed-without-extpos] Fixed expression 'sotto ad' does not have the 'ExtPos' feature
+...suppressing further messages regarding WARNING/MORPHO
+[Line 902 Sent 764]: [L3 WARNING fixed-without-extpos] Fixed expression 'Fin da' does not have the 'ExtPos' feature
+[Line 998 Sent 774]: [L3 SYNTAX obl-should-be-nmod] The parent (node [13] 'domanda') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 1138 Sent 778]: [L3 WARNING fixed-without-extpos] Fixed expression 'grazie a' does not have the 'ExtPos' feature
+[Line 1219 Sent 782]: [L3 WARNING fixed-without-extpos] Fixed expression 'di fronte' does not have the 'ExtPos' feature
+[Line 1254 Sent 782]: [L3 SYNTAX too-many-objects] Multiple direct objects [68, 74] ('tutto', 'pregi') under the predicate 'piace'.
+[Line 1412 Sent 803]: [L3 WARNING fixed-without-extpos] Fixed expression 'dentro di' does not have the 'ExtPos' feature
+[Line 1476 Sent 806]: [L3 WARNING fixed-without-extpos] Fixed expression 'grazie a' does not have the 'ExtPos' feature
+[Line 1599 Sent 808]: [L3 SYNTAX obl-should-be-nmod] The parent (node [13] 'matematica') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 1683 Sent 809]: [L3 WARNING fixed-without-extpos] Fixed expression 'su di' does not have the 'ExtPos' feature
+[Line 1902 Sent 816]: [L3 WARNING fixed-without-extpos] Fixed expression 'rispetto a' does not have the 'ExtPos' feature
+...suppressing further messages regarding WARNING/SYNTAX
+[Line 10064 Sent 745]: [L3 SYNTAX rel-upos-case] 'case' should not be 'ADJ' ('vicini')
+[Line 10569 Sent 775]: [L3 SYNTAX too-many-objects] Multiple direct objects [15, 20] ('ci', 'tempo') under the predicate 'lascia'.
+[Line 12310 Sent 888]: [L3 SYNTAX obl-should-be-nmod] The parent (node [24] 'eliminazione') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 13923 Sent 1013]: [L3 SYNTAX obl-should-be-nmod] The parent (node [48] 'aspetti') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 19647 Sent 862]: [L3 SYNTAX too-many-objects] Multiple direct objects [2, 5] ('lo', 'principio') under the predicate 'ritengo'.
+[Line 21986 Sent 1230]: [L3 SYNTAX too-many-objects] Multiple direct objects [5, 11] ('lo', 'guerra') under the predicate 'abbiamo'.
+[Line 22828 Sent 911]: [L3 SYNTAX obl-should-be-nmod] The parent (node [5] 'avvenimenti') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+Warnings: 959
+SYNTAX errors: 10
+*** FAILED *** with 10 errors
 Exit code: 1
 Validity: 0.01
 (weight=0.111111111111111) * (score{features}=0.5) = 0.0555555555555556
